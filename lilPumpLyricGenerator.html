@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            font-family: monospace;
+            text-align: center;
+        }
+    </style>
+    <script>
+        function getRandomNumber(min, max) {
+            return Math.floor((max - min) * Math.random()) + min;
+        }
+
+        function onClick() {
+            let input = document.getElementById('input').value;
+            let output = (document.getElementById('output'));
+            for(let i = 0; i<10; i++){
+                if (getRandomNumber(0,10) == 0) {
+                    input += 'Gucci Gang ' 
+                } else {
+                    
+                input += input+ ' ';
+                }
+                if(i %4 == 0){
+                    input += '\n';
+                }
+            }
+            output.innerHTML = '<span>'+input+'</span>';
+        }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lil Pump Lyric Generator</title>
+</head>
+<body>
+    <input id = 'input'></input>
+<button onclick="onClick()">GENERATE</button>
+<h2 id="output"></h2>
+</body>
+</html>

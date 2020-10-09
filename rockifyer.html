@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        body {
+
+            font-family: monospace;
+            text-align: center;
+        }
+    </style>
+    <script>
+        var rockified = ''
+        function getRandomNumber(min, max) {
+            return Math.floor((max - min) * Math.random()) + min;
+        }
+
+        function getRandomElement(l) {
+            getRandomNumber(0, l.length)
+        }
+
+        function rockify(string) {
+            string = [...string]
+            let length = string.length;
+            for (let i = 0; i < length; i++) {
+                if (getRandomNumber(0, 2)) {
+                    string[i] = string[i].toUpperCase();
+                } else {
+                    string[i] = string[i].toLowerCase();
+                }
+            }
+            return string.join('');
+        }
+        function onClick() {
+            let input = document.getElementById('input').value
+            let output = (document.getElementById('output'))
+            rockified = rockify(input)
+            output.innerHTML = '<span>' + rockified + '</span>'
+        }
+        async function onCopy() {
+            await copyTextToClipboard(rockified)
+            alert('Users dont know whether the copy is successful. Thats what this alert is for')
+        }
+        function copyTextToClipboard(text) {
+            if (!navigator.clipboard) {
+                fallbackCopyTextToClipboard(text);
+                return;
+            }
+            navigator.clipboard.writeText(text).then(function () {
+                console.log('Async: Copying to clipboard was successful!');
+            }, function (err) {
+                console.error('Async: Could not copy text: ', err);
+            });
+        }
+    </script>
+    <meta charset="UTF-8">
+    <title>Rockifyer</title>
+</head>
+
+<body>
+    <input id='input'></input>
+    <button onclick="onClick()">Rockify</button>
+    <h2 id="output">How dare you reading this before inputting something!</h2>
+    <button onclick="onCopy()">Copy</button>
+</body>
+
+</html>

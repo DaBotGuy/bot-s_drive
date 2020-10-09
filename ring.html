@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Punch Him!</title>
+    <style>
+        body {
+            font-family: monospace;
+        }
+        #bar {
+            color: green;
+            border: black solid 3px;
+            padding: 4px;
+            text-align: center;
+        }
+        #target {
+            cursor: crosshair;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 20%;
+        }
+    </style>
+    <script>
+        window.onload = () => {
+            document.getElementById('bar').innerHTML = healthUI(health);
+            console.log('playBell')
+            let bellSource = document.createElement('audio');
+            // bellSource.setAttribute('src',)
+            // bellSource.src = 'bell.mp3';
+            // bellSource.play();
+        }
+        var health = 100;
+        function healthUI(x) {
+            let output = 'Health ';
+            for (let i = 0; i < x/5; i++) {
+                output += '█';
+            }
+            return output;
+        }
+        function getColor(x){
+            if(x > 50){
+                return 'green';
+            } else if (x > 25){
+                return 'orange';
+            }
+            return 'red';
+        }
+        function getImageUrl(x){
+            if(x < 25){
+                return 'https://4.bp.blogspot.com/-NlJCGWPDNFA/UC4cy2ZqNNI/AAAAAAAAB7M/9IH0YemJ7WI/s1600/justin+Bieber+injured.jpeg';
+            }
+            return 'https://www.biography.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cg_face%2Cq_auto:good%2Cw_300/MTM2OTI2NTY2Mjg5NTE2MTI5/justin_bieber_2015_photo_courtesy_dfree_shutterstock_348418241_croppedjpg.jpg';
+        }
+        function punch(){
+            document.getElementById('punchSource').play();
+            //Play sound
+            if(health == 0){
+                // Add that knockout message!
+                let message = document.createElement('h1');
+                message.innerHTML = 'KNOCK OUT!';
+                message.style.color = 'red';
+                document.body.appendChild(message);
+
+                let healButton = document.createElement('button');
+                healButton.onclick = heal;
+                healButton.innerHTML = 'Heal Him';
+                document.body.appendChild(healButton);
+            }
+            else if(health > 0){
+                console.log('PUNCHING')
+            health -= 10;
+            let bar = document.getElementById('bar');
+            bar.innerHTML = healthUI(health);
+            bar.style.color = getColor(health);
+            let target = document.getElementById('target');
+            target.setAttribute('src', getImageUrl(health));
+            console.log(health)
+            }
+        }
+        function heal(params) {
+            alert('I wont let you heal him.\nBOOM.\n I blasted the hospital. HAHAHA')
+        }
+    </script>
+</head>
+
+<body>
+    <h1 id="head">::Boxing Ring::</h1>
+    <p id="include">#include&ltjustin_bieber.h&gt</p>
+    <img id='target' src="https://www.biography.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cg_face%2Cq_auto:good%2Cw_300/MTM2OTI2NTY2Mjg5NTE2MTI5/justin_bieber_2015_photo_courtesy_dfree_shutterstock_348418241_croppedjpg.jpg"
+        onclick="punch()">
+    <p id = 'bar'></p>
+        <p>Tap his face to punch him. Dont break your device in excitement!</p>
+    <audio id='punchSource' src="punch.mp3"></audio>
+    <audio src="bell.mp3" autoplay></audio>
+</body>
+
+</html>
