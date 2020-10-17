@@ -5,6 +5,7 @@
     <style>
         .grid-container {
             display: grid;
+            align-items: center;
             grid-template-columns: auto auto auto;
         }
 
@@ -14,10 +15,11 @@
             text-align: center;
             border: 5px solid black;
             height: 100px;
+            transition: 0.5s;
         }
         .grid-item:hover {
-            background-color: red;
-            
+            border-width: 10px;
+            background-color: orange;
         }
         /* .grid-item:hover {
             background-color: yellow;
