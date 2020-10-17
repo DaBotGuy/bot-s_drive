@@ -1,0 +1,18 @@
+Deadline: Oct
+ DONE - Master Git and GitHub
+ - Become a web dev (HTML, CSS, vanilla java script)
+ - Thirukkural
+   - Rate my app
+   - Ads
+Deadline: Nov
+ - Learn angular
+ - Learn firebase
+ - Dark Chat
+Deadline: Dec
+ - Learn JS
+ - Learn Python
+ - Learn back-end
+Deadline: Jan
+ - BUILD a lotta apps
+Deadline: Feb
+ - BUILD a lotta apps

@@ -1,0 +1,44 @@
+---------------Main Ideas--------------
+Time allocation:
+Producing Apps > learning technologies 
+---------------------------------------
+
+==================================================
+Semi-LONG TERM: [DEADLINE March]
+
+Master at least 3 technologies and make software
+ - Master Git
+ - Learn Firebase
+ - Become a web dev (vanilla java script)
+ - Learn a web cross-platform framework (Like angular)
+ - Learn back-end
+ - Learn languages (Dart, Javascript, Python)
+ - Build DarkChat (Do good ASO, SEO)
+ - Build Some apps (Do good ASO, SEO)
+
+==================================================
+Long term: [DEADLINE College term]
+
+Become a simple Da Bot and make software
+(Ability to build any app with existing frameworks simply. 
+Creating > Performance)
+ - Start the YT channel (Maybe "bot's world")
+ - Master languages (Dart, Javascript, Python)
+ - Master Firebase
+ - Master Flutter
+ - Master Angular
+ - Master Vanilla web development
+ - Learn Unity
+
+ - Learn back-end (Like node)
+ - Learn C++
+
+ - Built Mega Me (Do good ASO, SEO)
+ - Build Some apps (Do good ASO, SEO)
+====================================================
+END-GOAL:
+
+Building Utopia
+Be an advanced Da Bot(Mastering Low level stuff Like Linus Torvalds)
+Be an Emcee BLOB
+Creating the utopia

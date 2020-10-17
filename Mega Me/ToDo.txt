@@ -1,0 +1,9 @@
+Deadline Oct 17
+ - Thirukkural
+ - Rate my app
+
+Deadline Oct 24
+ - Become a web dev (HTML, CSS, vanilla java script)
+
+Deadline Oct 31
+ - Master Git and GitHub
