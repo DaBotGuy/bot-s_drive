@@ -2,13 +2,15 @@
 <html lang="en">
 
 <head>
-    <style>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- <style>
         body {
 
             font-family: monospace;
             text-align: center;
         }
-    </style>
+    </style> -->
     <script>
         var rockified = ''
         function getRandomNumber(min, max) {
@@ -34,8 +36,13 @@
         function onClick() {
             let input = document.getElementById('input').value
             let output = (document.getElementById('output'))
-            rockified = rockify(input)
-            output.innerHTML = '<span>' + rockified + '</span>'
+            if (input.length == 0) {
+                alert('Im intelligent enough to know the field is empty. Dont test me!')
+            } else {
+                rockified = rockify(input)
+                output.innerHTML = '<span>' + rockified + '</span>'
+
+            }
         }
         async function onCopy() {
             await copyTextToClipboard(rockified)
@@ -58,6 +65,7 @@
 </head>
 
 <body>
+    <h1>ROCKIFYER</h1>
     <input id='input'></input>
     <button onclick="onClick()">Rockify</button>
     <h2 id="output">How dare you reading this before inputting something!</h2>

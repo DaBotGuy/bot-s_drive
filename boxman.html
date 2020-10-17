@@ -1,46 +1,36 @@
-
 <html>
-    <head>
-        <title>Box Man</title>
-        <script>
-            var fat = 4;
-            window.onload = ()=>{
-               var boxman = document.getElementById('boxman');
-               boxman.style.borderWidth = fat.toString();
-            }
-            function eat(){
-                fat+=2;
-               var boxman = document.getElementById('boxman');
-                boxman.style.borderWidth = fat.toString();
-            }
-            function exercise(){
-                fat = 4;
-                var boxman = document.getElementById('boxman');
-                boxman.style.borderWidth = fat.toString();
-            }
-        </script>
-        <style>
-        #boxman {
-            border: black solid 2px;
-            height: 300px;
-            width: 300px;
 
-            background-color: red;
-            margin: 20px;
-            margin-left: auto;
-            margin-right: auto;
+<head>
+    <link rel="stylesheet" href="style.css">
+
+    <title>Box Man</title>
+    <script>
+        var fat = 4;
+        window.onload = () => {
+            var boxman = document.getElementById('boxman');
+            boxman.style.borderWidth = fat.toString();
         }
-        
-        </style>
-        </head>
+        function eat() {
+            fat += 2;
+            var boxman = document.getElementById('boxman');
+            boxman.style.borderWidth = fat.toString();
+        }
+        function exercise() {
+            fat = 4;
+            var boxman = document.getElementById('boxman');
+            boxman.style.borderWidth = fat.toString();
+        }
+    </script>
+</head>
+
 <body>
-<h6>BOXMAN</h6>
-<div id="boxman">
+    <h1>BOXMAN</h1>
+    <button onclick='eat()'>EAT</button>
+    <button onclick='exercise()'>Exercise</button>
+    <div id="boxman">
 
-</div>
-
-<button onclick='eat()'>EAT</button>
-<button onclick='exercise()'>Exercise</button>
+    </div>
 
 </body>
+
 </html>
