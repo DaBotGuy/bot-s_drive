@@ -93,6 +93,13 @@
       flex-flow:column;
     }
   </style>
+  <script>
+    function updateColor(){
+      let input = document.getElementById('colorPicker').value;
+      console.log(input)
+      document.body.style.setProperty('--bg', input)
+    }
+  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
@@ -105,8 +112,8 @@
     <h5 style="text-align:center; font-family:Courier New">(Bot's Drive)</h5>
   </div>
   <div class='links'>
-    <input type="color" name="Pick your back-ground(So I can blame someone if the site is awful)" id="colorPicker">
-    <a class="link" href="modules/why_its_ugly.html">Why this site is ugly?</a>
+    <input type="color" oninput="updateColor()" name="Pick your back-ground(So I can blame someone if the site is awful)" id="colorPicker"> Pick back ground color
+    <button class="link" onclick="alert('Its because of the color you picked! Not me!')">Why is this site ugly?</button>
     <a class="link card" href="modules/ring.html">Boxing Ring</a>
     <a class="link card" href="modules/boxman.html">BoxMan</a>
     <a class="link card" href="modules/rockifyer.html">Rockifyer</a>

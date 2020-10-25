@@ -11,9 +11,9 @@
 }
 
 body {
-    
+    --bg: white;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
+    background-color: var(--bg);
     display: flex;
     flex-flow: column;
     color: rgba(0, 0, 0,0.6);
