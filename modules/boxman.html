@@ -1,0 +1,55 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="../style.css">
+
+    <title>Box Man</title>
+    <script>
+        var name = 'Box Man';
+        var fat = 4;
+        window.onload = () => {
+            setBoxManFat(fat);
+        }
+        function eat() {
+            console.log(fat);
+            fat += 2;
+            setBoxManFat(fat);
+            if(fat > 50){
+                let oldName = name;
+                name += ' ghost';
+                alert(`${oldName} died he is a ${name} now!`);
+                setBoxManColor('white');
+                exercise();
+            }
+        }
+        function exercise() {
+            fat = 4;
+            setBoxManFat(fat);
+        }
+        function setBoxManFat(fat){
+            var boxman = document.getElementById('boxman');
+            boxman.style.borderWidth = fat.toString();
+        }
+        function setBoxManColor(color){
+            var boxman = document.getElementById('boxman');
+            try {
+
+            boxman.style.backgroundColor = color;
+            } catch (e) {
+                console.log(e.toString());
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h1>BOXMAN v2</h1>
+    <button onclick='eat()'>EAT</button>
+    <button onclick='exercise()'>Exercise</button>
+    <div id="boxman">
+
+    </div>
+
+</body>
+
+</html>
