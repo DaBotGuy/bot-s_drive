@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        #fridge {
+            margin: 5px;
+            border: solid black 2px;
+        }
+
+        #pickBest {
+            text-decoration: underline;
+            color: blue;
+            cursor: pointer;
+        }
+
+        .item {
+            display: flex;
+            border-bottom: 2px solid coral;
+            background-color: white;
+        }
+
+        .deleteButton {
+            color: black;
+            background-color: coral;
+            padding: 2px;
+            cursor: pointer;
+        }
+
+        .itemName {
+            padding: 2px 2px 2px 4px;
+        }
+
+        * {
+            text-align: center;
+        }
+        .picker {
+            border: solid black 2px;
+            background-color: lightyellow;
+            text-align: center;
+            
+        }
+        .pickerItem {
+            cursor: pointer;
+            padding: 10px;
+        }
+        body {
+           font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+           color: rgba(0, 0, 0, 0.75);
+           background-color: lightcyan;
+        }
+       
+    </style>
+    <script>
+        var copy = [];
+        var isPicking = false;
+        function addItem() {
+            console.log('add...')
+            let input = document.querySelector('#input')
+            if (input.value == '') {
+                console.log('EMPTY!')
+                return;
+            }
+            let newItem = document.createElement('div')
+            newItem.className = 'item'
+            newItem.innerHTML = `<span class='deleteButton'>x</span><span class='itemName'>${input.value}</span>`
+            let fridge = document.querySelector('#fridge')
+            fridge.appendChild(newItem)
+            input.value = ''
+        }
+        function pickBest() {
+            // let copy = document.body.getElementsByClassName('itemName')[0].innerText
+            copy = [];
+            let itemNames = document.body.getElementsByClassName('itemName')
+            for (let index = 0; index < itemNames.length; index++) {
+                const element = itemNames[index];
+                copy.push(element.innerText)
+            }
+            if (copy.length == 1) {
+                    alert(`${copy[0]} is the best!`)
+                    return;
+                }
+            console.log(isPicking)
+            if (isPicking == false) {
+                isPicking = true;
+
+                console.log(`gonna pick best from ${copy}`)
+                
+                let picker = document.createElement('div');
+                picker.className = 'picker'
+                picker.innerHTML = `<h2>Which is worse?</h2><span class='pickerItem'>${copy[0]}</span>OR<span class='pickerItem'>${copy[1]}</span>`
+                document.body.appendChild(picker)
+            }
+        }
+        document.addEventListener(
+            'click',
+            function (e) {
+                if (e.target.className == 'deleteButton') {
+                    e.target.parentElement.remove();
+                }
+                if (e.target.className == 'pickerItem') {
+                    // Remove this item from copy
+                    let itemName = e.target.innerText;
+
+                    console.log(`${itemName} Eliminated!`)
+                    copy = removeItemOnce(copy, itemName)
+                    console.log(copy)
+                    let picker = document.getElementsByClassName('picker')[0]
+                    if (copy.length == 1) {
+                        alert(`${copy[0]} is the best!`)
+                        isPicking = false;
+                        picker.remove();
+                        return;
+                    }
+                    picker.innerHTML = `<h2>Which is worse?</h2><span class='pickerItem'>${copy[0]}</span>VS<span class='pickerItem'>${copy[1]}</span>`
+                }
+            }
+        )
+        function removeItemOnce(arr, value) {
+            var index = arr.indexOf(value);
+            if (index > -1) {
+                arr.splice(index, 1);
+            }
+            return arr;
+        }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fridge</title>
+</head>
+
+<body>
+    <h1>Da Fridge!</h1>
+    <input id='input' type="text" onsubmit="addItem()">
+    <button onclick="addItem()">
+        ADD
+    </button>
+    <div id='fridge'>
+        <div class='item'>
+            <span class='deleteButton'>
+                x
+            </span>
+            <span class='itemName'>
+                Witch Skull
+            </span>
+        </div>
+    </div>
+    Fridge is my house is kinda greyish like this. so this is fridge. ()
+    <div id="pickBest" onclick="pickBest()">Pick best</div>
+
+    <!-- <div class='picker'>
+        <div>Which is worse?</div>
+            <span class='pickerItem'>
+                Marshall
+            </span>
+            VS
+            <span class='pickerItem'>
+                pump
+            </span>
+        </div> -->
+</body>
+
+</html>
