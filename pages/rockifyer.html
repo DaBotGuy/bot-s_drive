@@ -2,15 +2,12 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="../style.css">
-
-    <!-- <style>
-        body {
-
-            font-family: monospace;
-            text-align: center;
+    <link rel="stylesheet" href="../global_style.css">
+    <style>
+        p {
+            font-size: 40px;
         }
-    </style> -->
+    </style>
     <script>
         var rockified = ''
         function getRandomNumber(min, max) {
@@ -66,9 +63,9 @@
 
 <body>
     <h1>ROCKIFYER</h1>
-    <input id='input'></input>
+    <input type='text' id='input'></input>
     <button onclick="onClick()">Rockify</button>
-    <h2 id="output">How dare you reading this before inputting something!</h2>
+    <p id="output">How dare you reading this before inputting something!</p>
     <button onclick="onCopy()">Copy</button>
 </body>
 

@@ -1,20 +1,44 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../global_style.css">
+    <style>
+        #boxman {
+            border: black solid 2px;
+            height: 300px;
+            width: 300px;
 
+            background-color: red;
+            margin: 20px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
     <title>Box Man</title>
     <script>
+        var irritation = 0;
         var name = 'Box Man';
         var fat = 4;
         window.onload = () => {
             setBoxManFat(fat);
+            document.querySelector('#boxman').addEventListener('click', (e) => {
+                irritation++;
+                if (irritation === 2) {
+                    alert('IM WARNING YOU FOR THE LAST TIME. DONT POKE ME!!!😫')
+                    return;
+                }
+                if (irritation === 3) {
+                    window.opener = self;
+                    window.close();
+                }
+                alert('DONT poke me. Im not talking tom. I will kill you if you keep on poking me.')
+            })
         }
         function eat() {
             console.log(fat);
             fat += 2;
             setBoxManFat(fat);
-            if(fat > 50){
+            if (fat > 50) {
                 let oldName = name;
                 name += ' ghost';
                 alert(`${oldName} died he is a ${name} now!`);
@@ -26,15 +50,15 @@
             fat = 4;
             setBoxManFat(fat);
         }
-        function setBoxManFat(fat){
+        function setBoxManFat(fat) {
             var boxman = document.getElementById('boxman');
             boxman.style.borderWidth = fat.toString();
         }
-        function setBoxManColor(color){
+        function setBoxManColor(color) {
             var boxman = document.getElementById('boxman');
             try {
 
-            boxman.style.backgroundColor = color;
+                boxman.style.backgroundColor = color;
             } catch (e) {
                 console.log(e.toString());
             }
@@ -43,7 +67,7 @@
 </head>
 
 <body>
-    <h1>BOXMAN v2</h1>
+    <h1>BOXMAN v2 (Your pet)</h1>
     <button onclick='eat()'>EAT</button>
     <button onclick='exercise()'>Exercise</button>
     <div id="boxman">

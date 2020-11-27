@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../global_style.css">
 
     <!-- <style>
         body {
@@ -34,7 +34,9 @@
             }
             output.innerHTML = '<span>' + input + '</span>';
             let meme = document.createElement('div');
-            meme.innerHTML = '<span>😁 Yes I know the output looks like unrolled toilet paper!</span>';
+            if (meme.innerHTML == '') {
+                meme.innerHTML = '<span>😁 Yes I know the output looks like unrolled toilet paper!</span>';
+            }
             document.body.appendChild(meme);
         }
     </script>
@@ -44,8 +46,9 @@
 </head>
 
 <body>
+
     <h1>Lil pump ⛽ Lyrics Generator</h1>
-    <input id='input'></input>
+    <input type='text' id='input'></input>
     <button onclick="onClick()">GENERATE</button>
     <div class="card">
 

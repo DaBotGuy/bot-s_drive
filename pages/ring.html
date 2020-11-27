@@ -2,30 +2,25 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../global_style.css">
 
     <title>Punch Him!</title>
-    <!-- <style>
+    <style>
         body {
-            font-family: monospace;
-        }
-        #bar {
-            color: green;
-            border: black solid 3px;
-            padding: 4px;
             text-align: center;
         }
-        #target {
+
+        img {
+            border: 1px rgb(36, 36, 36) solid;
+            border-radius: 0%;
             cursor: crosshair;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            border-radius: 20%;
         }
-    </style> -->
+    </style>
     <script>
         window.onload = () => {
             document.getElementById('bar').innerHTML = healthUI(health);
+            l = [1, 2, 3]
+
             console.log('playBell')
             let bellSource = document.createElement('audio');
             // bellSource.setAttribute('src',)
@@ -90,6 +85,7 @@
 </head>
 
 <body>
+
     <h1 id="head">Boxing Ring</h1>
     <div class="card">
 

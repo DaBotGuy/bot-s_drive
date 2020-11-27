@@ -1,0 +1,140 @@
+.grid {
+display: grid;
+grid-template-columns: repeat(6, 1fr);
+grid-template-areas:
+"ban ban ban ban ban ban"
+"pan dor dor dor dor dor"
+"pan . . . . ."
+"spc spc spc spc spc spc"
+;
+}
+.space {
+    grid-area: 'spc';
+    height: 50px;
+}
+.module {
+margin: 2px;
+border: 1px solid rgb(51, 51, 51);
+min-height: 200;
+background-color: lightgoldenrodyellow;
+}
+
+.banner {
+grid-area: ban;
+background-color: lightblue;
+padding: 5px;
+padding-left: 10px;
+text-align: start;
+}
+
+.dora-the-explorer {
+grid-area: dor;
+}
+
+.panel {
+grid-area: pan;
+}
+
+body {
+margin: 0;
+--bg: #fff;
+background-color: var(--bg);
+text-align: center;
+
+}
+
+
+
+.pseudo-link {
+color: blue;
+display: inline;
+cursor: pointer;
+text-decoration: underline;
+}
+
+.dora-the-explorer-contents {
+display: flex;
+flex-wrap: wrap;
+/* padding: 5px; */
+}
+
+.fileLink {
+width: 100px;
+padding: 2px;
+margin: 2px;
+border: #ccc solid 1px;
+position: relative;
+transition: 0.3s ease-in-out;
+top: 0;
+background-color: rgb(255, 255, 255);
+
+}
+
+.fileLink:hover {
+background-color: rgb(144, 183, 255);
+top: -15px;
+z-index: 1;
+}
+
+.bar {
+display: flex;
+justify-content: space-between;
+text-align: start;
+/* padding: 5px; */
+padding-left: 10px;
+background-color: #ddd;
+}
+
+.bar-button {
+background-color: white;
+padding-left: 3px;
+padding-right: 3px;
+cursor: pointer;
+font-weight: normal;
+}
+
+.color-picker {
+position: fixed;
+bottom: 0;
+padding: 5px;
+z-index: 1;
+}
+
+.why-ugly {
+position: fixed;
+bottom: 0;
+right: 0;
+z-index: 1;
+padding-right: 10px;
+}
+
+.drive-label {
+text-align: start;
+padding-left: 10px;
+}
+
+.panel-contents {
+padding: 5px;
+}
+
+.panel a,
+.panel span {
+display: block;
+text-align: start;
+}
+
+.category a {
+padding-left: 10px;
+}
+
+/* MOBILE STYLE */
+@media(max-width: 600px) {
+    
+    .grid {
+        grid-template-areas:
+"ban ban ban ban ban ban"
+"dor dor dor dor dor dor"
+"pan pan pan pan pan pan"
+;
+    }
+  }

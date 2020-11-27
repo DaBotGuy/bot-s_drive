@@ -1,127 +1,116 @@
-<!-- <head>
-  <link rel="stylesheet" href="style.css">
-
-  <title>Bot's Drive</title>
-  <style>
-    p {
-      width: 100px;
-      word-break: break-all;
-    }
-
-    .visual {
-      height: 400px;
-      width: 400px;
-      display: block;
-
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .link {
-      display: flex;
-      justify-content: center;
-    }
-  </style>
-</head>
-
-<table>
-  <tr>
-    <td> <img class='visual' src='https://i.scdn.co/image/8d38481927c46840efeda04eaf5cd617dc78f53c'> </td>
-    <td><img class='visual'
-        src='https://media1.tenor.com/images/5a7849ec0ec41b0885c0a606d53eef2c/tenor.gif?itemclass=7225174'></td>
-    <td> <img class='visual' src='https://i.pinimg.com/originals/82/6b/7a/826b7af82e4d50ccb6018f325fc3d3d6.gif'></td>
-  </tr>
-  <tr>
-    <td><img class='visual' src='https://media2.giphy.com/media/12jcwKEZNh4GSQ/giphy.gif'></td>
-    <td>
-      <div class="card">
-
-        <h1 style="text-align:center; font-family:Courier New">B:\ </h1>
-        <h5 style="text-align:center; font-family:Courier New">(Bot's Drive)</h5>
-        <a class="link" href="modules/ring.html">Boxing Ring</a>
-        <a class="link" href="modules/boxman.html">BoxMan</a>
-        <a class="link" href="modules/rockifyer.html">Rockifyer</a>
-        <a class="link" href="modules/b_news.html">B news</a>
-        <a class="link" href="modules/lil_pump_lyric_generator.html">Lil Pump lyrics Generator</a>
-        <a class="link" href="modules/paintings.html">Botlo picasso paintings</a>
-        <a class="link" href="modules/I_know_where_you_are.html">I know where you are</a>
-      </div>
-    <a class="link" href="eyeHurter.html">Eye hurter</a>
-    </td>
-    <td>
-      <img class='visual' src='https://media.tenor.com/images/cf5d29abf98927706acbd8c4f7c17b91/tenor.gif'>
-    </td>
-
-
-  </tr>
-  <tr>
-    <td><img class='visual' src='https://media0.giphy.com/media/f9k1tV7HyORcngKF8v/giphy.gif'></td>
-    <td>You can try and read my lyrics off of this paper before I lay 'em
-      But you won't take the sting out these words before I say 'em
-      'Cause ain't no way I'm a let you stop me from causin' mayhem
-      When I say I'm a do somethin' I do it
-      I don't give a damn what you think</td>
-    <td> <img class='visual' src='https://i.pinimg.com/originals/8b/fe/24/8bfe24cb7fdc127e39b0fed51435758a.gif'></td>
-  </tr>
-</table> -->
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <link rel="stylesheet" href="style.css">
-  <style>
-    p {
-      width: 100px;
-      word-break: break-all;
-    }
-
-    .visual {
-      height: 400px;
-      width: 400px;
-      display: block;
-
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .link {
-      padding: 1rem;
-    }
-    .links {
-      display: flex;
-      flex-flow:column;
-    }
-  </style>
+  <link rel="stylesheet" href="global_style.css">
+  <link rel="stylesheet" href="index-style.css">
   <script>
-    function updateColor(){
+    function updateColor() {
       let input = document.getElementById('colorPicker').value;
       console.log(input)
       document.body.style.setProperty('--bg', input)
     }
+
   </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>B Drive</title>
 </head>
 
 <body>
-  <div class='heads'>
+  <div class="grid">
+    <div class="space">
 
-    <h1 style="text-align:center; font-family:Courier New">B:\ </h1>
-    <h5 style="text-align:center; font-family:Courier New">(Bot's Drive)</h5>
-  </div>
-  <div class='links'>
-    <input type="color" oninput="updateColor()" name="Pick your back-ground(So I can blame someone if the site is awful)" id="colorPicker"> Pick back ground color
-    <button class="link" onclick="alert('Its because of the color you picked! Not me!')">Why is this site ugly?</button>
-    <a class="link card" href="modules/fridge.html">Beautiful Fridge</a>
-    <a class="link card" href="modules/ring.html">Boxing Ring</a>
-    <a class="link card" href="modules/boxman.html">BoxMan</a>
-    <a class="link card" href="modules/rockifyer.html">Rockifyer</a>
-    <a class="link card" href="modules/b_news.html">B news</a>
-    <a class="link card" href="modules/lil_pump_lyric_generator.html">Lil Pump lyrics Generator</a>
-    <a class="link card" href="modules/paintings.html">Botlo picasso paintings</a>
-    <a class="link card" href="modules/I_know_where_you_are.html">I know where you are</a>
+    </div>
+    <div class='banner'>
+      This drive runs Doors 12 OS
+    </div>
+    <div class="color-picker">
+
+      <input type="color" oninput="updateColor()" id="colorPicker"> Pick back ground color
+    </div>
+    <p class="why-ugly pseudo-link" onclick="alert('Its because of the color you picked! Not me!')">Why is this OS
+      ugly?</p>
+    <div class="module dora-the-explorer">
+      <div class="bar">
+        Dora The Explorer
+
+        <div class="bar-buttons"
+          onclick="alert('These buttons wont work. To help you not to CLOSE it off, accidentally. I know your feelings. You\'re welcome')">
+
+          <span class="bar-button">
+            _
+          </span>
+          <span class="bar-button">
+            ☐
+          </span>
+          <span class="bar-button">
+            X
+          </span>
+        </div>
+      </div>
+      <div class="drive-label">
+        B:\
+      </div>
+      <div class='dora-the-explorer-contents'>
+        <div class="fileLink">
+          <img src="assets/file-icon.png" , height=64, width=64> <br>
+          <a href="pages/fridge.html">Beautiful Fridge</a>
+        </div>
+        <div class="fileLink">
+          <img src="assets/file-icon.png" , height=64, width=64> <br>
+          <a href="pages/ring.html">Boxing Ring</a>
+
+        </div>
+        <div class="fileLink">
+          <img src="assets/file-icon.png" , height=64, width=64> <br>
+          <a href="pages/boxman.html">BoxMan</a>
+        </div>
+        <div class="fileLink">
+          <img src="assets/file-icon.png" , height=64, width=64> <br>
+          <a href="pages/rockifyer.html">Rockifyer</a>
+        </div>
+        <div class="fileLink">
+          <img src="assets/file-icon.png" , height=64, width=64> <br>
+          <a href="pages/b_news.html">B news</a>
+        </div>
+        <div class="fileLink">
+          <img src="assets/file-icon.png" , height=64, width=64> <br>
+          <a href="pages/lil_pump_lyric_generator.html">Lil Pump lyrics Generator</a>
+        </div>
+        <div class="fileLink">
+          <img src="assets/file-icon.png" , height=64, width=64> <br>
+          <a href="pages/paintings.html">Botlo picasso paintings</a>
+        </div>
+        <div class="fileLink">
+          <img src="assets/file-icon.png" , height=64, width=64> <br>
+          <a href="pages/I_know_where_you_are.html">I know where you are</a>
+        </div>
+        <div class="fileLink">
+          <img src="assets/file-icon.png" , height=64, width=64> <br>
+          <a href="pages/secret.html">Secret message</a>
+        </div>
+      </div>
+    </div>
+    <div class="module panel">
+      <div class="bar">
+        PANEL
+      </div>
+      <div class="panel-contents">
+        <div class="category">
+          <span>Quick Access</span>
+          <a href="https://www.google.com/">Google</a>
+          <a href="https://docs.oracle.com/en/java/">Java Docs</a>
+          <a href="https://www.youtube.com/">Youtube</a>
+          <a href="https://www.twitter.com/">Twitter</a>
+          <a href="https://www.discord.com/">Discord</a>
+
+        </div>
+        <a onclick="alert('You are already in your computer.')">Your Computer</a>
+        <a href="pages/why-better.html">Why this is better than Windows</a>
+      </div>
+
+    </div>
   </div>
 </body>
 
